@@ -1,0 +1,16 @@
+
+version: 2
+
+jobs:
+
+  build:
+
+    docker:
+
+      - image: circleci/golang:1.12
+      - image: postgres:11.2
+
+    steps:
+      - checkout
+
+      - run: go run main.go
