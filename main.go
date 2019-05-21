@@ -10,9 +10,9 @@ import (
 
 func main() {
 	// use with local kubernetes cluster on minikube
-	source := "user=postgres host=192.168.99.100 port=32283 dbname=postgres sslmode=disable"
+	// source := "user=postgres host=192.168.99.100 port=32283 dbname=postgres sslmode=disable"
 	// use with Circle CI
-	// source := "user=postgres host=localhost dbname=postgres sslmode=disable"
+	source := "user=postgres host=localhost dbname=postgres sslmode=disable"
 	db, err := sql.Open("postgres", source)
 	if err != nil {
 		panic(err)
